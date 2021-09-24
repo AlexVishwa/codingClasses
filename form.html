@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> fill the form </title>
+<style>
+border-color:green;
+border-style:solid;
+</style>
+<body>
+
+<form role= "form" method="post">
+<h1>
+	Sign-up form
+</h1>
+
+<br>
+<p id='error'></p>
+<br>
+<input type= "text" placeholder= "your real name"/>
+<br>
+<input type= "email" placeholder= "E-mail" id="mail"/>
+<br>
+<input type = "password" placeholder="your password" id="passwordone"/>
+<br>
+<input type = "password" placeholder="your confirmed password" id="passwordtwo"/>
+<br>
+<input type="number" placeholder="age" id="urage"/>
+<br>
+<button type="button" id="Sbtn" onclick="func1()">click</button>
+</form>
+<script>
+function func1()
+{
+  let a=document.getElementById("passwordone").value;
+  let patt = /[a-z][a-z][a-z][0-9]/i;
+  //let result = a.match(patt);
+  if(a.match(patt)!=a)
+  {
+  	document.getElementById("error").innerHTML='Password should be of 4 characters';
+  }
+    
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>
+my boy
+</title>
+<style>
+border-color:voilet;
+</style>
+</head>
+<body>
+	<form role="form" method="post">
+	<input type="email"  name="email" placeholder="enter your EMAIL" id="one"/>
+	<input type="text" placeholder="enter your name" id="two"/>
+	<input type="password" name= "password" placeholder="enter your password" id="abc"/>
+	<button type="button">
+		login
+	</button>
+</form>
+<script>
+	
+	$("button").click(function(){
+		let Email=document.getElementById('one').value;
+	let Password=document.getElementById('abc').value;
+	console.log(Email);
+  $.post("http://localhost/streamer/api/login.php",{
+email:Email, password:Password
+  }
+		, function(response){
+    alert("Data: " + response);
+  });
+});
+</script>
+</body>
+</html>

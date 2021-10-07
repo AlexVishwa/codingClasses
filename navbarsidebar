@@ -1,0 +1,75 @@
+DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://kit.fontawesome.com/e6e0052600.js" crossorigin="anonymous"></script>
+<title>
+navigation bar
+</title>
+<style>
+#closedbar:: before{
+	float :right ;
+	
+}
+ul{
+	list-style-type: none;
+	display: inline;
+	background-color: black;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+li{
+	list-style-type: none;
+	color: black;
+	float: left;
+	margin: 5px;
+	padding-left: 20px;
+	padding-top: 30px;
+}
+}li a:hover{
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div>
+		<a onclick="close()">
+		</a>
+	</div>
+	<div id="closedbar">
+	<button type= "button">
+		<a onclick="open()">
+			<i class="fas fa-bars">
+			</i>
+		</a>
+	</button>
+	<ul>
+		<li>
+		<button type="button">
+			<a>
+			<i class="fa-solid fa-align-slash">
+			</i>
+		</a>
+		</button>
+		</li>
+		<li>
+			home
+		</li>
+		<li>
+			products
+		</li>
+		<li>
+			information
+		</li>
+		<li>
+			about
+		</li>
+	</ul>
+
+</div>
+<script type="text/javascript">
+	document.getElementById('closedbar').style.width
+</script>
+</body>
+</html>

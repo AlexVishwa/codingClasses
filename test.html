@@ -1,37 +1,58 @@
-<!DOCTYPE.HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>test yo improve myself</title>
-<style>
-	border-color:red;
-	background-color:green;
-</style>
 </head>
 <body>
 <label>
-enter a number between 13 to 16 digits
+Enter a number between 13 to 16 digits
 </label> 
 <input type="text" placeholder="enter a number" id ="credit"/>
-</body>
-<script >
-	let num c=0;
-	let num r;
-	let num p;
-	let mum a=0;
-	let num s=0;
-	let num o=0;
-	let num n=document.getElementById("credit").innerHTML.value
-	let num m=document.getElementById("credit").innerHTML.value
-    if(n>0)
+<button onclick="validation()">Check Validation</button>
+<script>
+	function validation(){
+	let c=0;
+	let a=0;
+	let k;
+	let n=document.getElementById("credit").value;
+    for(let i=n;i>1;i=i/10)
     {
+    	
     	c++;
-    	if(c/2!=0)
+
+    }
+    if(n>=13)
+    {
+    	
+    	for(let i=0;i<=n;i++)
     	{
-    	r=(n%10)*2;
-    	if(r>=10)
+    		z=n%10;	
+    		if(i%2==0)
+    		{
+    			
+    			if(z<=4)
     			{
-    				r=r%10;
-    				a=a+r;
+    				a=a+(z*2);
     			}
-    			s=s+ a;
+    			else{
+
+    				k=z%10;
+    				z=z/10
+    				k=k+z%10;
+    				a=a+k;
+    			}
+    		}
+    		else
+    		{
+    			a=a+z;
+    		}
+    		k=0;
+    	}
+    }
+    if(a%10==0){
+    	alert("Valid Number");
+    }
+	}
 </script>
+</body>
+</html>

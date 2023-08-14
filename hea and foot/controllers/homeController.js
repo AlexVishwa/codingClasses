@@ -7,6 +7,10 @@ exports.homeController = (req, res) => {
     res.render('index', data)
 }
 
+function onclickDelete(){
+alert("Your item will be deleted");
+}
+
 
 
 

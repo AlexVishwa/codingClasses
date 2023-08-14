@@ -1,0 +1,78 @@
+<head>
+    <%- include("../shared/head") %>
+    <link rel="shortcut icon" href="#">
+   <!-- <a href="(/order)"></a> -->
+   <p><a href="/orders" class="link-primary"> View Orders</a></p>
+
+</head>
+<body>
+    <div class="container">
+        <h1>My Shop!!</h1>
+
+        <% if (typeof errors !=="undefined") { for (let error of errors) { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <span><%= error.msg %></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <% } } %>
+
+        <form method="post" action="/">
+            <div class="mb-2"> 
+                <label class="form-label" for="fname">Name :</label>
+                <input class="form-control" type="text" name="fname" />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="email">E-mail Address :</label>
+                <input class="form-control" type="text" name="email"  />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="cnumber">Phone :</label>
+                <input class="form-control" type="tel" name="cnumber"  />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="address">Address :</label>
+                <input class="form-control" type="text" name="address"  />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="city">City :</label>
+                <input class="form-control" type="text" name="city" />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="postalCode">Postal-Code :</label>
+                <input class="form-control" type="text" name="postalCode" />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="province">Province :</label>
+                <input class="form-control" type="text" name="province"  />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="productOne">Product 1 @2$ :</label>
+                <input class="form-control" type="number" name="productOne" />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="productTwo">Product 2 @3$ :</label>
+                <input class="form-control" type="number" name="productTwo" /> 
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="productThree">Product 3 @5$ :</label>
+                <input class="form-control" type="number" name="productThree"  />   
+            </div>
+            <div class="mb-2"> 
+                <label class="form-label" for="productFour">Product 4 @10$ :</label>
+                <input class="form-control" type="number" name="productFour"  />   
+            </div>
+            <div class="mb-2">
+                <label for="deliveryDate">Dselivery in :</label>
+                <select name="deliveryDate" id="deliveryDate">
+                    <option value="1">3 Days</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">1 Day</option>
+                </select>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Place Order " />
+        </form>
+
+        <%- include("../shared/footer") %>
+    </div>
+    <%- include("../shared/script") %>
+</body>

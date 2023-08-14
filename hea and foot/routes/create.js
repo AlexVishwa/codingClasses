@@ -25,3 +25,11 @@ router.get('/api/createMobile',async (req,res)=>{
 	}
 	
 });
+
+router.get('/delete/:id', function(req,res){
+	var id= req.params.id;
+	ConnectionCreatedEvent.findByIdAndRemove({_id:id}.exec(function(err,contact){
+	console.log("deleted");	
+	}))
+})
+

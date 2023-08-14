@@ -1,0 +1,116 @@
+<head>
+    
+    <%- include("../shared/head") %>
+  
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <h1>View Orders</h1>
+        <p><a href="/" class="link-primary"> View Ordres</a></p>
+        <table class="table table-hover table-bordered">
+            <tbody>
+                <tr>
+                    <td>Name :</td>
+                    <td><%= order.fname %></td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>E-mail :</td>
+                    <td><%= order.email %></td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                    <td>Contact Number</td>
+                    <td>
+                        <%= order.cnumber %>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <%= order.address %>
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <%= order.city %>
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Postal Code</td>
+                    <td>
+                        <%= order.postalCode %>
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Province</td>
+                    <td>
+                        <%= order.province %>
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Product One Quantity</td>
+                    <td><input type="text" editable="true" value="<%= order.product1 %>"/>
+                    </td>
+                    <td> <button class="btn btn-warning" id="product1" onClick="update('<%= order.id %>','<%= order.product1 %>')">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Product Two Quantity</td>
+                    <td><input type="text" editable="true" value="<%= order.product2 %>"/>
+                        <!-- <%= order.product2 %> -->
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Product Three Quantity</td>
+                    <td><input type="text" editable="true" value="<%= order.product3 %>"/>
+                        <!-- <%= order.product3 %> -->
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Product Four Quantity</td>
+                    <td><input type="text" editable="true" value="<%= order.product4 %>"/>
+                        <!-- <%= order.product4 %> -->
+                    </td>
+                    <td> <button class="btn btn-warning">Update</button></td>
+                </tr>
+
+                
+                <tr>
+                    <td>Delivery Time</td>
+                    <td>
+                        <%= order.deliveryDate %>
+                    </td>
+                    
+                </tr>
+
+                
+                <tr>
+                    <td>Shipping Cost</td>
+                    <td>$<%= order.sCharges %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$<%= order.taxes %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$<%= order.total %>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <%- include("../shared/footer") %>
+    </div>
+    <%- include("../shared/script") %>
+</body>

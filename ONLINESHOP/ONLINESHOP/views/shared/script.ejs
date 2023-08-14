@@ -1,0 +1,17 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function update(id,product1quantity){
+        var product1=document.getElementById("product1").value;
+        var xhttp = new XMLHttpRequest();
+
+        var url="/update/"+id
+        xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+        
+        }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send(JSON.stringify(product1));
+    }
+</script>

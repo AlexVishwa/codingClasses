@@ -2,7 +2,7 @@
 
 <script>
     function update(id,product1quantity){
-        var product1=document.getElementById("product1").value;
+        var product1=document.getElementsByName("product1")[0].value;
         var xhttp = new XMLHttpRequest();
 
         var url="/update/"+id
@@ -11,7 +11,9 @@
         
         }
         };
-        xhttp.open("GET", url, true);
-        xhttp.send(JSON.stringify(product1));
+        xhttp.open("POST", url, true);
+        xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        xhttp.send('product1='+product1)
+        alert("The value has been updated")
     }
 </script>

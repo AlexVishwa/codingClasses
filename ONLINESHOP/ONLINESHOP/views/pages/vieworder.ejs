@@ -57,9 +57,9 @@
                 </tr>
                 <tr>
                     <td>Product One Quantity</td>
-                    <td><input type="text" editable="true" value="<%= order.product1 %>"/>
+                    <td><input type="text" editable="true" value="<%= order.product1 %>" name="product1"/>
                     </td>
-                    <td> <button class="btn btn-warning" id="product1" onClick="update('<%= order.id %>','<%= order.product1 %>')">Update</button></td>
+                    <td> <button class="btn btn-warning" onClick="update('<%= order.id %>','<%= order.product1 %>')">Update</button></td>
                 </tr>
                 <tr>
                     <td>Product Two Quantity</td>
